@@ -6,7 +6,7 @@ var content = index.toString('utf8');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(content0);
+  response.send(content);
 });
 
 var port = process.env.PORT || 5000;
