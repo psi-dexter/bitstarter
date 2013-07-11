@@ -15,8 +15,8 @@ var assertFileExists = function(infile) {
     return instr;
 };
 
-var cheerioHtmlFile = function(Htmlfile) {
-    return cheerio.Load(fs.readFileSync(htmlfile));
+var cheerioHtmlFile = function(htmlfile) {
+    return cheerio.load(fs.readFileSync(htmlfile));
 };
 var cheerioHtmlLink = function(result, response) {
 
@@ -38,19 +38,22 @@ var checkHtmlFile = function(htmlfile, checksfile) {
     }
     return out;
 };
-var buildfn = function(result, response) {
-
-    var checkHtml = function(html, checksfile) {
-	$ = cheerioHtmlLink(html);
-	var checks = loadChecks(checksfile).sort();
-	var out = {};
-	for(var ii in checks) {
-	    var present = $(checks[ii]).length > 0;
-	    out[checks[ii]] = present;
-	}
-	return out;
-    };
-    return checkHtml(response, 'checks.json');
+var buildfn = function(checksfile) {
+    //console.log(result)
+    var checkHtml = function(result, response) {
+        //console.log(result)
+	   $ = cheerioHtmlLink(result);
+	   var checks = loadChecks(checksfile).sort();
+	   var out = {};
+	   for(var ii in checks) {
+	       var present = $(checks[ii]).length > 0;
+	       out[checks[ii]] = present;
+	   }
+	   var outJson = JSON.stringify(out, null, 4);
+       console.log(outJson);
+       //return out;
+   };
+    return checkHtml;
 };
 
 var clone = function(fn) {
@@ -66,14 +69,16 @@ if(require.main == module) {
 	.option('-u, --url <html_url>', 'Link to html')
 	.parse(process.argv);
     if(program.url) {
-	var rest = require('restler');
-	var checkJson = rest.get(program.url).on('complete', buildfn);
-	console.log(checkJson);
+	   var rest = require('restler');
+       console.log('try to get url')
+       var checkHtml = buildfn(program.checks)
+	   //var checkJson = 
+       rest.get(program.url).on('complete', checkHtml);
+	   //console.log(checkJson);
     } else {
-	var checkHtmlFile = checkJson(program.file, program.checks);}
-    var outJson = JSON.stringify(checkJson, null, 4);
-
-    console.log(outJson);
+	   var checkJson = checkHtmlFile(program.file, program.checks);
+        var outJson = JSON.stringify(checkJson, null, 4);
+        console.log(outJson);};
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
