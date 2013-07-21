@@ -1,1 +1,1 @@
-https://github.com/psi-dexter/bitstarter/blob/d261cab62cc1a54966a0c993f2c121641a497635/index.html
+https://raw.github.com/psi-dexter/bitstarter/6b8b50ce67a90148794cd63f7fdc737b843e113a/index.html
