@@ -97,47 +97,51 @@
       }
       </style>
 </head>
-  <body>
-
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/exampes/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-	<div class="container">
-	  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-	  <a class="brand" href="#">Bitstarter</a>
-	  <div class="nav-collapse collapse">
-	    <ul class="nav">
-	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="#about">About</a></li>
-	      <li><a href="#contact">Contact</a></li>
-	    </ul>
-	  </div><!--/.nav-collapse -->
-	</div>
+<body>
+  <!-- Mobile-friendly navbar adapted from example. -->
+  <!-- http://twitter.github.io/bootstrap/exampes/starter-template.html -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="#">Bitstarter</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-     </div>
-    
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- bloga.andjin.com/2013/04/tips-for-implementing responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="conrainer">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid subheading">
+    </div>
+  </div>
+  <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+  <!-- bloga.andjin.com/2013/04/tips-for-implementing responsive-designs-using-bootstrap/ -->
+  <!-- http://stackoverflow.com/a/12270322 -->
+  <div class="conrainer">
+  <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+  <!-- www.google.com/fonts/specimen/Ubuntu -->
+    <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+  <div class="row-fluid subheading">
 	<div class="span12">
 	  <!-- Special typography from Bootstrap for lead paragraph. -->
 	  <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-	  <p class="lead">Сделай свой телевизор умным!.</p>
-        </div>
-      </div>
+	  <p class="lead">Сделай свой телевизор умным!</p>
+  </div>
+  </div>
       <div class="row-fluid pitch">
 	<div class="span5 offset1 video">
-	  <img class="img-polaroid" src="http://www.geek.com/wp-content/uploads/2012/03/raspberry-pi-case_05a.jpg">
+	  <img class="img-polaroid" src="http://www.geek.com/wp-content/uploads/2012/03/raspberry-pi-case_05a.jpg"/>
 	</div>
 
 	<!-- we define a new 'actions' div to contain statistics, order, and share buttons. -->
@@ -145,73 +149,76 @@
 	  <div class="span8 offset2">
 	    <div class="statistics">
 	      <div class="span4">
-		<!-- linediv-l and linediv-r give dividing lines that look different
-		     in horizontal and vertical layouts, innustrating media queries. -->
-		<div class="linediv-l">
-		<h3>100</h3> <p>backers</p>
-		</div>
-	      </div>
-	      <div class="span4">
-		<div class="linediv-c">
-		  <h3>6000р.</h3> <p> of 100,000р.</p>
-		</div>
-	      </div>
-	      <div class="span4">
-		<div class="linediv-r">
-		<h3>30</h3> <p>days left</p>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="span10 offset1">
+		      <!-- linediv-l and linediv-r give dividing lines that look different
+		      in horizontal and vertical layouts, innustrating media queries. -->
+		      <div class="linediv-l">
+      		  <h3>100</h3> <p>Ягодок</p>
+      		</div>
+      	 </div>
+      	 <div class="span4">
+      	   <div class="linediv-c">
+      		  <h3>6000р.</h3> <p> of 100,000р.</p>
+      	   </div>
+      	 </div>
+      	 <div class="span4">
+      	   <div class="linediv-r">
+      		  <h3>30</h3> 
+            <p>days left</p>
+      		  </div>
+	       </div>
+	     </div>
+	   </div>
+	   <div class="span10 offset1">
 	    <!-- Bootstrap progress bar -->
 	    <!-- http://twitter.github.io/bootstrap/components.html#porgress -->
-	    <div class="termometer progress active">
-	      <div class="bar bar-success" style="width: 60%;"></div>
-	      <div class="bar bar-warning" style="width: 40%;"></div>
-	    </div>
-	   </div>
-	   <div class="span6 offset3 order">
-	     <!-- Standart Bootstrap button. -->
-	     <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-	     <button class="btn btn-success btn-large">Предзаказ</button>
-	   </div>
-	   <div class="span8 offset2 social">
-	     <!-- Social buttons are not included in defailt Bootstrap -->
-	     <!-- See http://noizwaves.github.io/bootstrap-social-buttons -->
-	     <button class="btn btn-twitter"><i class="icon-twitter"></i> Twitter</button>
-	     <button class="btn btn-facebook"><i class="icon-facebook"></i> Facebook</button>
-	   </div>
-	</div>
+      <div class="termometer progress active">
+        <div class="bar bar-success" style="width: 6%;"></div>
+          <div class="bar bar-warning" style="width: 94%;"></div>
+          </div>
+        </div>
+      <div class="span6 offset3 order">
+        <!-- Standart Bootstrap button. -->
+        <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+        <button class="btn btn-success btn-large">Предзаказ</button>
       </div>
-
+      <div class="span8 offset2 social">
+        <!-- Social buttons are not included in defailt Bootstrap -->
+        <!-- See http://noizwaves.github.io/bootstrap-social-buttons -->
+        <button class="btn btn-twitter"><i class="icon-twitter"></i> Twitter</button>
+        <button class="btn btn-facebook"><i class="icon-facebook"></i> Facebook</button>  
+      </div>
+    </div>
+  </div>
      <!-- Beyond this part the marketing copy begins. -->
      <!-- https://developer.mozzila.org/en-US/docs/Web/CSS/text-aling -->
      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
      <!-- http://placehold.it -->
      <div class="row-fluid selection1">
-       <div class="span6 offset0 asset">
-	 <iframe width="560" height="315" src="http://www.youtube.com/embed/T970YM3w1LY" frameborder="0" allowfullscreen></iframe>
+       <div class="span5 offset1">
+        <div class="flex-video widescreen"><iframe width="450" height="253" src="http://www.youtube.com/embed/T970YM3w1LY" frameborder="0" allowfullscreen></iframe>
+        </div>
        </div>
-       <div class="span5 copy">
-	 <p>
-	   Приставака "Ягодка" позволяет просматривать любой контент из инетрнета на любом телевизоре!
-     С Ягодкой вы сможете просматривать ваши любимые сериалы даже у бабушки на даче.
-     Ягодка имеет 30 гигабай встроенного места, и 2 USB порта для подключения модема или других накопителей.
-	 </p>
+       <div class="span5 assert">
+      	 <p>
+      	   Телевизионная приставка "Ягодка" позволяет просматривать любой записаный не нее, или на флэшку контентю Кроме того, если подключить ее к интернету, то можно смотреть свои любимые сериалы он-лайн, на любом телевизоре!
+           С Ягодкой вы сможете просматривать ваши любимые сериалы даже у бабушки на даче. Кроме того, если у вас есть смартфон, то вы можете управлять вашей Ягодкой прямо с него!
+           Ягодка имеет:
+           - 30 гигабай встроенного места.
+           - 2 USB порта для подключения модема или других накопителей.
+      	 </p>
        </div>
      </div>
 
      <div class="row-fluid selection2">
        <div class="span5 offset1 copy copy-right">
 	 <p>
-	   Кроме того, Ягодка может выполнять роль игровой приставки. Просто поменяй карту расширения и получишь игровую консоль эмулируюшую старую добрую "Денди" или "Сегу". Возможности Ягодки поистине неограниченные. просто пеменяв карту расширения можно превратить Ягодку во все что угодно.
+	   Кроме того, Ягодка может выполнять роль игровой приставки. Просто поменяй карту расширения и получи игровую консоль эмулируюшую старую добрую "Денди", "Сегу" или PC. Возможности Ягодки по-истине неограниченные. просто пеменяв карту расширения можно превратить Ягодку во все что угодно.
 	 </p>
        </div>
-       <div class="span5 asset">
-	 <img class="img-polaroid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbsKQxJ0jJ8WDiMwqcI_uZIkfCoiTnwMXJ3XojDewssaj3Ns4v">
-       </div>
-     </div>
+        <div class="span5 asset">
+	       <img class="img-polaroid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbsKQxJ0jJ8WDiMwqcI_uZIkfCoiTnwMXJ3XojDewssaj3Ns4v">
+        </div>
+      </div>
      <!-- for the FAQ, we introduce a little bit of JS, using the accordion. -->
      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
      <!-- http://twitter.github.io/bootstrap/javascript#collapse -->
